@@ -1,0 +1,51 @@
+# LLM Configuration
+llm:
+  provider: "deepseek"
+  max_tokens: 4096
+  temperature: 0.1
+  api_key: ""  # Set this in an environment variable or fill in here
+
+# Deepseek Cloud Configuration
+deepseek:
+  model: "deepseek-chat"  # Deepseek model name
+  api_key: ""  # Set this in an environment variable or fill in here
+  api_base: "https://api.deepseek.com/v1"  # Deepseek API endpoint
+  max_tokens: 4096
+  temperature: 0.1
+
+
+# Deepseek Local Configuration
+deepseek_local:
+  model: "mistralai/Mistral-7B-Instruct-v0.3"  # Model identifier or "localhost" for llama.cpp
+  api_base: "http://localhost:8000/v1"  # URL for local inference server (vLLM or llama.cpp)
+  max_tokens: 4096
+  temperature: 0.1
+  measure_performance: true  # Track performance metrics for local inference
+
+# EDR Data Configuration
+edr:
+  source: "carbon_black"
+  log_format: "json"  # or csv
+  time_window: 24  # hours to analyze
+  max_events: 1000  # maximum number of events to process in a single run
+
+# Analysis Configuration
+analysis:
+  chunk_size: 50  # events per chunk for context window management
+  overlap: 10  # events to overlap between chunks for continuity
+  timeout: 300  # seconds per API call
+  max_retries: 3
+  
+# Visualization Configuration
+visualization:
+  timeline_format: "interactive"  # or static
+  color_scheme: "viridis"
+  show_confidence_scores: true
+  
+# Output Configuration
+output:
+  report_format: "markdown"  # or html, pdf
+  verbosity: "medium"  # or minimal, detailed
+  save_intermediate_results: true
+
+

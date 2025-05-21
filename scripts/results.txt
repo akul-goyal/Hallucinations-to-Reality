@@ -1,0 +1,252 @@
+
+===== Testing with model name: model =====
+Testing vLLM server at http://localhost:8000
+
+--- Testing endpoint: http://localhost:8000/v1/chat/completions ---
+Payload: {
+  "model": "model",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `model` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/chat/completions ---
+Payload: {
+  "model": "model",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+--- Testing endpoint: http://localhost:8000/v1/completions ---
+Payload: {
+  "model": "model",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `model` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/completions ---
+Payload: {
+  "model": "model",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+All endpoints failed. Check your server configuration.
+
+===== Testing with model name: deepseek-coder =====
+Testing vLLM server at http://localhost:8000
+
+--- Testing endpoint: http://localhost:8000/v1/chat/completions ---
+Payload: {
+  "model": "deepseek-coder",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `deepseek-coder` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/chat/completions ---
+Payload: {
+  "model": "deepseek-coder",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+--- Testing endpoint: http://localhost:8000/v1/completions ---
+Payload: {
+  "model": "deepseek-coder",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `deepseek-coder` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/completions ---
+Payload: {
+  "model": "deepseek-coder",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+All endpoints failed. Check your server configuration.
+
+===== Testing with model name: default =====
+Testing vLLM server at http://localhost:8000
+
+--- Testing endpoint: http://localhost:8000/v1/chat/completions ---
+Payload: {
+  "model": "default",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `default` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/chat/completions ---
+Payload: {
+  "model": "default",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+--- Testing endpoint: http://localhost:8000/v1/completions ---
+Payload: {
+  "model": "default",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `default` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/completions ---
+Payload: {
+  "model": "default",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+All endpoints failed. Check your server configuration.
+
+===== Testing with model name: deepseek-ai/deepseek-coder-6.7b-base =====
+Testing vLLM server at http://localhost:8000
+
+--- Testing endpoint: http://localhost:8000/v1/chat/completions ---
+Payload: {
+  "model": "deepseek-ai/deepseek-coder-6.7b-base",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `deepseek-ai/deepseek-coder-6.7b-base` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/chat/completions ---
+Payload: {
+  "model": "deepseek-ai/deepseek-coder-6.7b-base",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a helpful assistant."
+    },
+    {
+      "role": "user",
+      "content": "Say hello!"
+    }
+  ],
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+--- Testing endpoint: http://localhost:8000/v1/completions ---
+Payload: {
+  "model": "deepseek-ai/deepseek-coder-6.7b-base",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"object":"error","message":"The model `deepseek-ai/deepseek-coder-6.7b-base` does not exist.","type":"NotFoundError","param":null,"code":404}...
+
+--- Testing endpoint: http://localhost:8000/completions ---
+Payload: {
+  "model": "deepseek-ai/deepseek-coder-6.7b-base",
+  "prompt": "System: You are a helpful assistant.\n\nUser: Say hello!",
+  "max_tokens": 50,
+  "temperature": 0.7
+}
+Status code: 404
+Error response: {"detail":"Not Found"}...
+
+All endpoints failed. Check your server configuration.

@@ -1,0 +1,36 @@
+# API clients for LLMs
+anthropic>=0.7.0
+openai>=1.0.0  # For Deepseek which uses OpenAI-compatible API
+
+# Local LLM inference
+transformers>=4.36.0  # For Hugging Face models
+torch>=2.0.0          # PyTorch for model inference
+psutil>=5.9.0         # For system resource monitoring
+gputil>=1.4.0         # For GPU monitoring
+
+# Optional local inference backends (uncomment based on needs)
+# vllm>=0.3.0          # For efficient inference on powerful GPUs
+# llama-cpp-python>=0.2.0  # For lightweight inference with llama.cpp
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# YAML configuration
+pyyaml>=6.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Testing
+pytest>=7.3.0
+
+# CLI interface
+click>=8.1.0
+
+# EDR log parsing (for Carbon Black)
+cbapi>=1.7.0

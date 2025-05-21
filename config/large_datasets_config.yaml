@@ -1,0 +1,67 @@
+# Large Dataset Analysis Configuration
+
+# LLM Configuration
+llm:
+  provider: "deepseek_local"  # Keeping provider name for code compatibility
+  model: "/home/akulg2/edr-llm-analyzer/models/mistral-7b-instruct"
+  max_tokens: 4096
+  temperature: 0.1
+  api_key: ""  # Not needed for local models
+
+# Deepseek Local Configuration (renamed to local_model in comments)
+deepseek_local:
+  model: "/home/akulg2/edr-llm-analyzer/models/mistral-7b-instruct"
+  api_base: "http://localhost:8000/v1"
+  max_tokens: 4096
+  temperature: 0.1
+  measure_performance: true
+
+# EDR Data Configuration
+edr:
+  source: "custom"  # Using custom format for your unique logs
+  log_format: "json"  # Assuming JSON format, change as needed
+  time_window: 168  # Analyze full week (168 hours)
+  max_events: 100000  # Large number for comprehensive analysis
+  custom_format: 
+    timestamp_field: "timestamp"  # Update with your actual timestamp field name
+    event_type_field: "event_type"  # Update with your actual event type field name
+    process_name_field: "process_name"  # Update with your actual process field name
+    severity_field: "severity"  # Update with your actual severity field name
+
+# Analysis Configuration - Optimized for Large Dataset
+analysis:
+  chunk_size: 100  # Process 100 events per LLM context window
+  overlap: 20  # 20% overlap between chunks for continuity
+  timeout: 300  # 5 minutes per API call
+  max_retries: 3
+  filter_noise: true  # Filter out low-value noise events
+  correlation_threshold: 0.6  # Minimum correlation score to link events
+  severity_threshold: 2  # Minimum severity to include in final report
+  
+# Visualization Configuration
+visualization:
+  timeline_format: "interactive"  # Interactive visualizations for better exploration
+  color_scheme: "viridis"
+  show_confidence_scores: true
+  max_timeline_events: 500  # Limit timeline to most significant events
+  
+# Output Configuration
+output:
+  report_format: "markdown"
+  verbosity: "detailed"  # Detailed output for research purposes
+  save_intermediate_results: true
+  performance_tracking: true  # Track and report performance metrics
+
+# Resource Management
+resources:
+  max_memory_usage_gb: 32  # Maximum memory to use (adjust based on your server)
+  max_gpu_memory_usage_gb: 24  # Maximum GPU memory to use
+  cpu_threads: 16  # Number of CPU threads to use for processing
+  disk_buffer_gb: 100  # Disk space for temporary files
+
+# Additional Settings for Research
+research:
+  track_limitations: true  # Track and report LLM limitations
+  measure_accuracy: true  # Compare with ground truth if available
+  save_timing_data: true  # Save detailed timing data for each stage
+  record_token_usage: true  # Record token usage for each LLM call
