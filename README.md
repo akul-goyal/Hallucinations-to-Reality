@@ -367,4 +367,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
+
+## Data
+You can download sample data at: https://uofi.box.com/s/6m1lmcy1yf2q9737smyoq9zihr0as7eu
+
 **Disclaimer**: This tool is for educational and research purposes only. The analysis provided by the LLM should not be solely relied upon for security decision-making in production environments. Always validate findings with traditional security tools and human expertise.
